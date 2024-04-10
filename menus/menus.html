@@ -35,6 +35,10 @@
                      cursor: default;
                   }
                }
+               &.default-accelerator::first-letter,
+               & .accelerator {
+                  text-decoration: underline;
+               }
             }
 
             /* Styles for the "Start" menu */
@@ -99,27 +103,27 @@
                &nbsp;
             </div>
             <div class="menu-body">
-               <div class="menu-row">
+               <div class="menu-row default-accelerator">
                   Programs
                </div>
-               <div class="menu-row">
+               <div class="menu-row default-accelerator">
                   Documents
                </div>
-               <div class="menu-row">
+               <div class="menu-row default-accelerator">
                   Settings
                </div>
-               <div class="menu-row">
+               <div class="menu-row default-accelerator">
                   Find
                </div>
-               <div class="menu-row">
+               <div class="menu-row default-accelerator">
                   Help
                </div>
-               <div class="menu-row">
+               <div class="menu-row default-accelerator">
                   Run
                </div>
                <div class="menu-row divider"></div>
                <div class="menu-row">
-                  Shut Down
+                  Sh<span class="accelerator">u</span>t Down
                </div>
             </div>
             <div class="clearfix"></div>
