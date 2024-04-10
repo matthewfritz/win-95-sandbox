@@ -24,6 +24,8 @@
             & .menu-row {
                width: 100%;
                color: rgb(0, 0, 0);
+               font-size: 12px;
+               font-family: sans-serif;
                &:hover {
                   background-color: rgb(0, 0, 128);
                   color: rgb(255, 255, 255);
@@ -35,7 +37,7 @@
                      cursor: default;
                   }
                }
-               &.default-accelerator::first-letter,
+               &.default-accelerator .text::first-letter,
                & .accelerator {
                   text-decoration: underline;
                }
@@ -57,6 +59,15 @@
                      &.divider {
                         height: 6px;
                      }
+                     & .image {
+                        height: 32px;
+                        width: 32px;
+                     }
+                     & .text {
+                        padding-top: 7px;
+                        padding-left: 6px;
+                        height: 25px;
+                     }
                   }
                }
             }
@@ -69,6 +80,15 @@
                      padding-left: 7px;
                      width: 156px;
                      height: 16px;
+                     & .image {
+                        height: 16px;
+                        width: 16px;
+                     }
+                     & .text {
+                        padding-top: 3px;
+                        padding-left: 7px;
+                        height: 13px;
+                     }
                   }
                }
             }
@@ -104,26 +124,40 @@
             </div>
             <div class="menu-body">
                <div class="menu-row default-accelerator">
-                  Programs
+                  <div class="text">
+                     Programs
+                  </div>
                </div>
                <div class="menu-row default-accelerator">
-                  Documents
+                  <div class="text">
+                     Documents
+                  </div>
                </div>
                <div class="menu-row default-accelerator">
-                  Settings
+                  <div class="text">
+                     Settings
+                  </div>
                </div>
                <div class="menu-row default-accelerator">
-                  Find
+                  <div class="text">
+                     Find
+                  </div>
                </div>
                <div class="menu-row default-accelerator">
-                  Help
+                  <div class="text">
+                     Help
+                  </div>
                </div>
                <div class="menu-row default-accelerator">
-                  Run
+                  <div class="text">
+                     Run
+                  </div>
                </div>
                <div class="menu-row divider"></div>
                <div class="menu-row">
-                  Sh<span class="accelerator">u</span>t Down
+                  <div class="text">
+                     Sh<span class="accelerator">u</span>t Down
+                  </div>
                </div>
             </div>
             <div class="clearfix"></div>
@@ -136,22 +170,34 @@
          <div class="menu">
             <div class="menu-body">
                <div class="menu-row">
-                  Accessories
+                  <div class="text">
+                     Accessories
+                  </div>
                </div>
                <div class="menu-row">
-                  StartUp
+                  <div class="text">
+                     StartUp
+                  </div>
                </div>
                <div class="menu-row">
-                  Microsoft Exchange
+                  <div class="text">
+                     Microsoft Exchange
+                  </div>
                </div>
                <div class="menu-row">
-                  MS-DOS Prompt
+                  <div class="text">
+                     MS-DOS Prompt
+                  </div>
                </div>
                <div class="menu-row">
-                  The Microsoft Network
+                  <div class="text">
+                     The Microsoft Network
+                  </div>
                </div>
                <div class="menu-row">
-                  Windows Explorer
+                  <div class="text">
+                     Windows Explorer
+                  </div>
                </div>
             </div>
          </div>
