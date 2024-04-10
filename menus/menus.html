@@ -1,0 +1,128 @@
+<html>
+   <head>
+      <title>Win95 Menu Sandbox</title>
+      <style type="text/css">
+         .clearfix {
+            clear: both;
+         }
+         .menu-sandbox {
+            /* Base styles for all menus */
+            & .sidebar {
+               background-color: rgb(128, 128, 128);
+               height: calc((7 * 32px) + 6px);
+            }
+            & .menu-body {
+               background-color: rgb(192, 192, 192);
+            }
+            & .menu-row {
+               width: 100%;
+               color: rgb(0, 0, 0);
+               &:hover {
+                  background-color: rgb(0, 0, 128);
+                  color: rgb(255, 255, 255);
+                  cursor: pointer;
+               }
+               &.divider {
+                  &:hover {
+                     background-color: transparent;
+                     cursor: default;
+                  }
+               }
+            }
+
+            /* Styles for the "Start" menu */
+            & .start-menu {
+               & .sidebar {
+                  width: 21px;
+                  float: left;
+               }
+               & .menu-body {
+                  width: 138px;
+                  float: left;
+                  & .menu-row {
+                     padding-left: 10px;
+                     width: 128px;
+                     height: 32px;
+                     &.divider {
+                        height: 6px;
+                     }
+                  }
+               }
+            }
+
+            /* Styles for the "normal" menu */
+            & .menu {
+               & .menu-body {
+                  width: 163px;
+                  & .menu-row {
+                     padding-left: 7px;
+                     width: 156px;
+                     height: 16px;
+                  }
+               }
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="menu-sandbox">
+         <!-- "Start" menu -->
+         <div class="start-menu">
+            <div class="sidebar">
+               &nbsp;
+            </div>
+            <div class="menu-body">
+               <div class="menu-row">
+                  Programs
+               </div>
+               <div class="menu-row">
+                  Documents
+               </div>
+               <div class="menu-row">
+                  Settings
+               </div>
+               <div class="menu-row">
+                  Find
+               </div>
+               <div class="menu-row">
+                  Help
+               </div>
+               <div class="menu-row">
+                  Run
+               </div>
+               <div class="menu-row divider"></div>
+               <div class="menu-row">
+                  Shut Down
+               </div>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+
+         <br /><br />
+
+         <!-- "Regular" menu -->
+         <div class="menu">
+            <div class="menu-body">
+               <div class="menu-row">
+                  Accessories
+               </div>
+               <div class="menu-row">
+                  StartUp
+               </div>
+               <div class="menu-row">
+                  Microsoft Exchange
+               </div>
+               <div class="menu-row">
+                  MS-DOS Prompt
+               </div>
+               <div class="menu-row">
+                  The Microsoft Network
+               </div>
+               <div class="menu-row">
+                  Windows Explorer
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
