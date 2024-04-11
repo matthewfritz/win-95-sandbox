@@ -16,7 +16,7 @@
             /* Base styles for all menus */
             & .sidebar {
                background-color: rgb(128, 128, 128);
-               height: calc((6 * 32px) + 6px + (1 * 37px));
+               height: calc((6 * 32px) + 2px + (1 * 37px));
             }
             & .menu-body {
                background-color: rgb(192, 192, 192);
@@ -32,6 +32,8 @@
                   cursor: default;
                }
                &.divider {
+                  border-top: inset 1px rgb(128, 128, 128);
+                  border-bottom: inset 1px rgb(255, 255, 255);
                   &:hover {
                      background-color: transparent;
                   }
@@ -71,7 +73,7 @@
                      width: 132px;
                      height: 32px;
                      &.divider {
-                        height: 6px;
+                        height: 0px;
                      }
                      &.larger {
                         padding-top: 5px;
