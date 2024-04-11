@@ -41,6 +41,21 @@
                & .accelerator {
                   text-decoration: underline;
                }
+               & .text,
+               & .image {
+                  float: left;
+               }
+               & .arrow {
+                  height: 7px;
+                  width: 4px;
+                  padding-right: 7px;
+                  margin-top: -5px;
+                  float: right;
+                  &::after {
+                     font-size: 24px;
+                     content: '🢒';
+                  }
+               }
             }
 
             /* Styles for the "Start" menu */
@@ -127,21 +142,25 @@
                   <div class="text">
                      Programs
                   </div>
+                  <div class="arrow"></div>
                </div>
                <div class="menu-row default-accelerator">
                   <div class="text">
                      Documents
                   </div>
+                  <div class="arrow"></div>
                </div>
                <div class="menu-row default-accelerator">
                   <div class="text">
                      Settings
                   </div>
+                  <div class="arrow"></div>
                </div>
                <div class="menu-row default-accelerator">
                   <div class="text">
                      Find
                   </div>
+                  <div class="arrow"></div>
                </div>
                <div class="menu-row default-accelerator">
                   <div class="text">
@@ -200,6 +219,7 @@
                   </div>
                </div>
             </div>
+            <div class="clearfix"></div>
          </div>
       </div>
 
