@@ -16,7 +16,7 @@
             /* Base styles for all menus */
             & .sidebar {
                background-color: rgb(128, 128, 128);
-               height: calc((7 * 32px) + 6px);
+               height: calc((6 * 32px) + 6px + (1 * 37px));
             }
             & .menu-body {
                background-color: rgb(192, 192, 192);
@@ -48,7 +48,7 @@
                   height: 7px;
                   width: 4px;
                   padding-right: 7px;
-                  margin-top: -5px;
+                  margin-top: -6px;
                   float: right;
                   &::after {
                      font-size: 24px;
@@ -67,11 +67,14 @@
                   width: 138px;
                   float: left;
                   & .menu-row {
-                     padding-left: 10px;
-                     width: 128px;
+                     padding-left: 6px;
+                     width: 132px;
                      height: 32px;
                      &.divider {
                         height: 6px;
+                     }
+                     &.larger {
+                        padding-top: 5px;
                      }
                      & .icon {
                         height: 32px;
@@ -190,7 +193,7 @@
                   </div>
                </div>
                <div class="menu-row divider"></div>
-               <div class="menu-row">
+               <div class="menu-row larger">
                   <div class="icon">
                      <img src="img/icons/icon-shut-down-start-menu.png" />
                   </div>
