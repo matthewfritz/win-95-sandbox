@@ -1,0 +1,25 @@
+/* Windows 95 Sandbox - "Default Theme" styles */
+/* Matthew Fritz - 2024 */
+/* https://github.com/matthewfritz/win-95-sandbox */
+
+:root {
+   --color-black: rgb(0,0,0);
+   --color-white: rgb(255, 255, 255);
+
+   --color-primary: var(--color-black);
+   --color-secondary: var(--color-white);
+
+   --color-text-primary: var(--color-primary);
+   --color-text-secondary: var(--color-secondary);
+
+   --color-menu-primary: rgb(192,192,192);
+   --color-menu-secondary: rgb(128,128,128);
+   --color-menu-light-border: var(--color-menu-primary);
+   --color-menu-dark-border: var(--color-primary);
+
+   --color-highlight-primary: rgb(0,0,128);
+   --color-highlight-secondary: var(--color-secondary);
+
+   --color-divider-bottom: var(--color-secondary);
+   --color-divider-top: var(--color-menu-secondary);
+}

@@ -11,7 +11,7 @@
    user-select: none;
 
    & .sidebar {
-      background-color: rgb(128, 128, 128);
+      background-color: var(--color-menu-secondary);
       height: calc((6 * 32px) + 2px + (1 * 37px));
 
       & .logo {
@@ -23,40 +23,36 @@
             text-orientation: sideways;
             writing-mode: vertical-lr;
             transform: rotate(-180deg);
-            color: rgb(192, 192, 192);
+            color: var(--color-menu-primary);
             & .brighter {
-               color: rgb(255, 255, 255);
+               color: var(--color-text-secondary);
             }
          }
       }
    }
    & .menu-body {
-      background-color: rgb(192, 192, 192);
+      background-color: var(--color-menu-primary);
    }
    & .menu-row {
       width: 100%;
-      color: rgb(0, 0, 0);
+      color: var(--color-text-primary);
       font-size: 12px;
       font-family: sans-serif;
       &:hover {
-         background-color: rgb(0, 0, 128);
-         color: rgb(255, 255, 255);
+         background-color: var(--color-highlight-primary);
+         color: var(--color-highlight-secondary);
          cursor: default;
 
          & .arrow svg path {
-            stroke: rgb(255, 255, 255);
+            stroke: var(--color-highlight-secondary);
          }
       }
       &.divider {
-         border-top: inset 1px rgb(128, 128, 128);
-         border-bottom: inset 1px rgb(255, 255, 255);
+         border-top: inset 1px var(--color-divider-top);
+         border-bottom: inset 1px var(--color-divider-bottom);
          &:hover {
             background-color: transparent;
          }
-      }
-      &.default-accelerator .text::first-letter,
-      & .accelerator {
-         text-decoration: underline;
       }
       & .text,
       & .icon {
@@ -75,8 +71,8 @@
       border: outset 2px;
       border-left-width: 3px;
       border-right-width: 1px;
-      border-bottom-color: rgb(128,128,128);
-      border-right-color: rgb(0,0,0);
+      border-bottom-color: var(--color-menu-light-border);
+      border-right-color: var(--color-menu-dark-border);
       width: 168px;
       & .sidebar {
          width: 21px;
@@ -101,7 +97,7 @@
       & .menu-body {
          width: 146px;
          float: left;
-         border-right: solid 1px rgb(128,128,128);
+         border-right: solid 1px var(--color-menu-secondary);
          & .menu-row {
             padding-left: 6px;
             width: 140px;
@@ -133,12 +129,12 @@
       border: outset 2px;
       border-left-width: 3px;
       border-right-width: 1px;
-      border-bottom-color: rgb(128,128,128);
-      border-right-color: rgb(0,0,0);
+      border-bottom-color: var(--color-menu-secondary);
+      border-right-color: var(--color-menu-dark-border);
       width: 180px;
       & .menu-body {
          width: 179px;
-         border-right: solid 1px rgb(128,128,128);
+         border-right: solid 1px var(--color-menu-secondary);
          & .menu-row {
             padding-left: 7px;
             padding-top: 3px;

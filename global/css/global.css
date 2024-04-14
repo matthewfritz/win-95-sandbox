@@ -5,3 +5,8 @@
 .clearfix {
    clear: both;
 }
+
+.default-accelerator .text::first-letter,
+.accelerator {
+   text-decoration: underline;
+}
