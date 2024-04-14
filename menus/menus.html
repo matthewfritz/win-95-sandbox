@@ -17,17 +17,20 @@
             & .sidebar {
                background-color: rgb(128, 128, 128);
                height: calc((6 * 32px) + 2px + (1 * 37px));
-               & .text {
-                  /*transform-origin: right center;
-                  transform: rotate(-90deg);
-                  width: calc((6 * 32px) + 2px + (1 * 37px));*/
-                  font-family: sans-serif;
-                  text-orientation: sideways;
-                  writing-mode: vertical-lr;
-                  transform: rotate(-180deg);
-                  color: rgb(192, 192, 192);
-                  & .brighter {
-                     color: rgb(255, 255, 255);
+
+               & .logo {
+                  /* Use and modify this for a text-based logo up the side vertically */
+                  & .text {
+                     font-family: sans-serif;
+                     font-size: 18px;
+                     font-weight: bold;
+                     text-orientation: sideways;
+                     writing-mode: vertical-lr;
+                     transform: rotate(-180deg);
+                     color: rgb(192, 192, 192);
+                     & .brighter {
+                        color: rgb(255, 255, 255);
+                     }
                   }
                }
             }
@@ -82,9 +85,21 @@
                & .sidebar {
                   width: 21px;
                   float: left;
-                  & .text {
-                     height: 231px;
-                     width: 21px;
+                  & .logo {
+                     /* Use and modify this for a text-based logo up the side vertically */
+                     /* padding-top = (sidebar height - image height - padding-bottom) */
+                     img {
+                        padding-bottom: 7px;
+                        padding-top: calc((6 * 32px) + 2px + (1 * 37px) - 115px - 7px);
+                     }
+                     /* Use and modify this for a text-based logo up the side vertically */
+                     /* height = (sidebar height - padding-top) */
+                     & .text {
+                        height: calc((6 * 32px) + 2px + (1 * 37px) - 7px);
+                        width: 21px;
+                        padding-right: 1px;
+                        padding-top: 7px;
+                     }
                   }
                }
                & .menu-body {
@@ -179,9 +194,19 @@
          <h3 id="startmenu">Start Menu Design</h3>
          <div class="start-menu">
             <div class="sidebar">
-               <div class="text">
-                  Windows <span class="brighter">95</span>
+               <!-- Comment-out the following if you don't want an image-based logo on the sidebar -->
+               <div class="logo">
+                  <img src="img/icons/icon-sidebar-logo-start-menu.png" />
                </div>
+
+               <!-- Uncomment the following to use a text-based logo on the sidebar -->
+               <!--
+               <div class="logo">
+                  <div class="text">
+                     Windows <span class="brighter">95</span>
+                  </div>
+               </div>
+               -->
             </div>
             <div class="menu-body">
                <div class="menu-row default-accelerator">
