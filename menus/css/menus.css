@@ -1,0 +1,166 @@
+/* Windows 95 Menu Sandbox styles */
+/* Matthew Fritz - 2024 */
+/* https://github.com/matthewfritz/win-95-sandbox */
+
+.clearfix {
+   clear: both;
+}
+.menu-container {
+   /* Base styles for all menus */
+
+   /* Prevent text selection across the board in the menus so we don't break the illusion */
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+
+   & .sidebar {
+      background-color: rgb(128, 128, 128);
+      height: calc((6 * 32px) + 2px + (1 * 37px));
+
+      & .logo {
+         /* Use and modify this for a text-based logo up the side vertically */
+         & .text {
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-orientation: sideways;
+            writing-mode: vertical-lr;
+            transform: rotate(-180deg);
+            color: rgb(192, 192, 192);
+            & .brighter {
+               color: rgb(255, 255, 255);
+            }
+         }
+      }
+   }
+   & .menu-body {
+      background-color: rgb(192, 192, 192);
+   }
+   & .menu-row {
+      width: 100%;
+      color: rgb(0, 0, 0);
+      font-size: 12px;
+      font-family: sans-serif;
+      &:hover {
+         background-color: rgb(0, 0, 128);
+         color: rgb(255, 255, 255);
+         cursor: default;
+
+         & .arrow svg path {
+            stroke: rgb(255, 255, 255);
+         }
+      }
+      &.divider {
+         border-top: inset 1px rgb(128, 128, 128);
+         border-bottom: inset 1px rgb(255, 255, 255);
+         &:hover {
+            background-color: transparent;
+         }
+      }
+      &.default-accelerator .text::first-letter,
+      & .accelerator {
+         text-decoration: underline;
+      }
+      & .text,
+      & .icon {
+         float: left;
+      }
+      & .arrow {
+         height: 7px;
+         width: 4px;
+         padding-right: 7px;
+         float: right;
+      }
+   }
+
+   /* Styles for the "Start" menu */
+   & .start-menu {
+      border: outset 2px;
+      border-left-width: 3px;
+      border-right-width: 1px;
+      border-bottom-color: rgb(128,128,128);
+      border-right-color: rgb(0,0,0);
+      width: 168px;
+      & .sidebar {
+         width: 21px;
+         float: left;
+         & .logo {
+            /* Use and modify this for a text-based logo up the side vertically */
+            /* padding-top = (sidebar height - image height - padding-bottom) */
+            img {
+               padding-bottom: 7px;
+               padding-top: calc((6 * 32px) + 2px + (1 * 37px) - 115px - 7px);
+            }
+            /* Use and modify this for a text-based logo up the side vertically */
+            /* height = (sidebar height - padding-top) */
+            & .text {
+               height: calc((6 * 32px) + 2px + (1 * 37px) - 7px);
+               width: 21px;
+               padding-right: 1px;
+               padding-top: 7px;
+            }
+         }
+      }
+      & .menu-body {
+         width: 146px;
+         float: left;
+         border-right: solid 1px rgb(128,128,128);
+         & .menu-row {
+            padding-left: 6px;
+            width: 140px;
+            height: 32px;
+            &.divider {
+               height: 0px;
+            }
+            &.larger {
+               padding-top: 5px;
+            }
+            & .icon {
+               height: 32px;
+               width: 32px;
+            }
+            & .text {
+               padding-top: 8px;
+               padding-left: 6px;
+               height: 24px;
+            }
+            & .arrow {
+               margin-top: 6px;
+            }
+         }
+      }
+   }
+
+   /* Styles for the "pop-up" menu */
+   & .menu {
+      border: outset 2px;
+      border-left-width: 3px;
+      border-right-width: 1px;
+      border-bottom-color: rgb(128,128,128);
+      border-right-color: rgb(0,0,0);
+      width: 180px;
+      & .menu-body {
+         width: 179px;
+         border-right: solid 1px rgb(128,128,128);
+         & .menu-row {
+            padding-left: 7px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            width: 172px;
+            height: 16px;
+            & .icon {
+               height: 16px;
+               width: 16px;
+            }
+            & .text {
+               padding-left: 7px;
+               padding-top: 1px;
+               height: 13px;
+            }
+            & .arrow {
+               margin-top: -1px;
+            }
+         }
+      }
+   }
+}
