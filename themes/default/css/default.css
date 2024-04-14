@@ -3,9 +3,6 @@
 /* https://github.com/matthewfritz/win-95-sandbox */
 
 :root {
-   --color-black: rgb(0,0,0);
-   --color-white: rgb(255, 255, 255);
-
    --color-primary: var(--color-black);
    --color-secondary: var(--color-white);
 
