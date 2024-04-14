@@ -14,6 +14,12 @@
          }
          .menu-sandbox {
             /* Base styles for all menus */
+
+            /* Prevent text selection across the board in the menus so we don't break the illusion */
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
             & .sidebar {
                background-color: rgb(128, 128, 128);
                height: calc((6 * 32px) + 2px + (1 * 37px));
